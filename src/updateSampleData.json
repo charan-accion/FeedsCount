@@ -1,0 +1,66 @@
+[
+    {
+        "feedName": "Opoint",
+        "feedCount": 440,
+        "date": "16/08/2022",
+        "category": "A",
+        "data": [
+            {
+                "name": "4h",
+                "count": 140
+            },
+            {
+                "name": "8h",
+                "count": 190
+            },
+            {
+                "name": "12h",
+                "count": 240
+            },
+            {
+                "name": "16h",
+                "count": 300
+            },
+            {
+                "name": "20h",
+                "count": 450
+            },
+            {
+                "name": "24h",
+                "count": 900
+            }
+        ]
+    },
+    {
+        "feedName": "Alliance News Feed",
+        "feedCount": 480,
+        "date": "16/08/2022",
+        "category": "A",
+        "data": [
+            {
+                "name": "4h",
+                "count": 1400
+            },
+            {
+                "name": "8h",
+                "count": 1000
+            },
+            {
+                "name": "12h",
+                "count": 400
+            },
+            {
+                "name": "16h",
+                "count": 800
+            },
+            {
+                "name": "20h",
+                "count": 1500
+            },
+            {
+                "name": "24h",
+                "count": 1100
+            }
+        ]
+    }
+]

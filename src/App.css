@@ -1,0 +1,40 @@
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  margin: 25px;
+}
+.feedName{
+  font-size:large;
+  font-weight:600;
+  text-align: center;
+}
+.Btn_filter {
+  text-align: center;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  /* display: grid; */
+  padding-top: 20px;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/*form*/
+
