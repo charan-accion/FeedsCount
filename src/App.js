@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <Dashboard />
       <ChartData />
-      <CreateFeed />
+      {/*<CreateFeed />*/}
     </div>
   );
 }

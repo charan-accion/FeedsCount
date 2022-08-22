@@ -17,9 +17,9 @@ const columns = [
 
 function ChartData() {
 
-  const [data, SetData] = useState({});
-  SetData(mockData);
-  console.log(data)
+  //const [data, SetData] = useState({});
+  //SetData(mockData);
+  //console.log(data)
    function handleClick(e) {
     //sampleData = updateSampleData;
     //return sampleData;
@@ -57,7 +57,7 @@ function ChartData() {
         <Card>
           <Card.Body>
             <Table caption="Incoming monitoring feeds data"
-              data={data}
+              data={mockData}
               columns={columns}>
 
             </Table>
@@ -67,7 +67,7 @@ function ChartData() {
       {/*Chart*/}
       <div className="row first_chart" >
 
-        {data.map((lineData) => (
+        {mockData.map((lineData) => (
           <div className="col-md-6">
             <Card>
               <Card.Body>
