@@ -17,14 +17,12 @@ const columns = [
 
 function ChartData() {
 
-  //const [data, SetData] = useState({});
-  //SetData(mockData);
-  //console.log(data)
+  const [data, SetData] = useState(mockData);
+  
+  console.log(data)
    function handleClick(e) {
-    //sampleData = updateSampleData;
-    //return sampleData;
+    SetData(updateSampleData);
   }
-  //console.log(update)
   return (
     <div className="row">
       {/*Buttons*/}
@@ -57,7 +55,7 @@ function ChartData() {
         <Card>
           <Card.Body>
             <Table caption="Incoming monitoring feeds data"
-              data={mockData}
+              data={data}
               columns={columns}>
 
             </Table>
@@ -67,37 +65,44 @@ function ChartData() {
       {/*Chart*/}
       <div className="row first_chart" >
 
-        {mockData.map((lineData) => (
-          <div className="col-md-6">
-            <Card>
-              <Card.Body>
-                <div className="feedName">{lineData.feedName}</div>
-                <ResponsiveContainer width="100%" aspect={2}>
-                  <LineChart
-                    width={500}
-                    height={300}
-                    data={lineData.data}
-                    margin={{
-                      top: 15,
-                      right: 30,
-                      left: 20,
-                      bottom: 15,
-                    }}
-                  >
-
-                    <CartesianGrid horizontal="true" vertical="" stroke="#243240" />
-                    <XAxis dataKey="name" tick={{}} />
-                    <YAxis tick={{}} />
-                    <Tooltip contentStyle={{}} itemStyle={{}} cursor={false} />
-                    <Line type="monotone" dataKey="count" stroke="#8884d8" strokeWidth="5" dot={{ fill: "#2e4355", stroke: "#8884d8", strokeWidth: 2, r: 5 }} activeDot={{ fill: "#2e4355", stroke: "#8884d8", strokeWidth: 5, r: 10 }} />
-
-                  </LineChart>
-                </ResponsiveContainer>
-
-              </Card.Body>
-            </Card>
-          </div>
-        ))};
+        {data.map((lineData, key) => {
+          //lineData[key].data.map((chartdata, key) => {
+            console.log("a",lineData,key)
+            return(
+              <div className="col-md-6" key={key}>
+              <Card >
+                <Card.Body>
+                  <div className="feedName">{lineData.feedName}</div>
+                  <ResponsiveContainer width="100%" aspect={2}>
+                    <LineChart
+                      width={500}
+                      height={300}
+                      data={lineData.data}
+                      margin={{
+                        top: 15,
+                        right: 30,
+                        left: 20,
+                        bottom: 15,
+                      }}
+                    >
+  
+                      <CartesianGrid horizontal="true" vertical="" stroke="#243240" />
+                      <XAxis dataKey="name" tick={{}} />
+                      <YAxis tick={{}} />
+                      <Tooltip contentStyle={{}} itemStyle={{}} cursor={false} />
+                      <Line type="monotone" dataKey="count" stroke="#8884d8" strokeWidth="5" dot={{ fill: "#2e4355", stroke: "#8884d8", strokeWidth: 2, r: 5 }} activeDot={{ fill: "#2e4355", stroke: "#8884d8", strokeWidth: 5, r: 10 }} />
+  
+                    </LineChart>
+                  </ResponsiveContainer>
+  
+                </Card.Body>
+              </Card>
+            </div>
+            )
+          //}
+          //)
+          
+        })};
 
       </div>
     </div>
