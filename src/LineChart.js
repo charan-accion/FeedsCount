@@ -50,7 +50,8 @@ function ChartData() {
           6M
         </Button>
       </div>
-      {/*Table*/}
+      {/*Table*/console.log("tabledata",data)}
+      
       <div className='table'>
         <Card>
           <Card.Body>
