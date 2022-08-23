@@ -1,14 +1,23 @@
 import './App.css';
-import ChartData from './LineChart';
-import Dashboard from './Dashboard';
-import CreateFeed from './CreateFeed';
+import './styles/styles.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ChartData from './component/LineChart';
+import Navbar from './component/Dashboard';
+import CreateFeed from './component/CreateFeed';
+import { Route, Routes } from "react-router-dom";
 function App() {
   return (
-    <div className="App">
-      <Dashboard />
-      <ChartData />
-      {/*<CreateFeed />*/}
-    </div>
+    
+    <>
+      <Navbar />
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<ChartData />} />
+          <Route path="/CreateFeed" element={<CreateFeed />} />
+         
+        </Routes>
+      </div>
+    </>
   );
 }
 export default App;

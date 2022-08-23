@@ -3,11 +3,11 @@
 const TableBody = ({ data, columns }) => {
     return (
       <tbody>
-        {data.map((data1,key) => {
+        {data.map((tabledata,key) => {
           return (
             <tr key={key}>
               {columns.map(({ accessor }) => {
-                const tData = data1[accessor] ? data1[accessor] : "——";
+                const tData = tabledata[accessor] ? tabledata[accessor] : "——";
                 return <td key={accessor}>{tData}</td>;
               })}
             </tr>

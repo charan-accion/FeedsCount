@@ -1,4 +1,3 @@
-import './App.css';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import React, { useState } from 'react';
 import Card from 'react-bootstrap/Card';
@@ -6,8 +5,8 @@ import Button from 'react-bootstrap/Button';
 import { render } from '@testing-library/react';
 import Table from "./Table";
 //import axios from "axios";
-import mockData from "../src/mockData.json";
-import updateSampleData from "../src/updateSampleData.json";
+import mockData from "../mockData.json";
+import updateSampleData from "../updateSampleData.json";
 
 const columns = [
   { label: "FeedName", accessor: "feedName" },

@@ -1,6 +1,5 @@
 import { useState } from "react";
-import "./App.css";
-import FormInput from "../src/FormInput";
+import FormInput from "./FormInput";
 import Card from 'react-bootstrap/Card';
 
 import Button from 'react-bootstrap/Button';
@@ -9,9 +8,8 @@ const CreateFeed = () => {
   const [values, setValues] = useState({
     username: "",
     email: "",
+    feedlocation:"",
     birthday: "",
-    password: "",
-    confirmPassword: "",
   });
 
   const inputs = [
@@ -37,7 +35,7 @@ const CreateFeed = () => {
     },
     {
         id: 3,
-        name: "feed location",
+        name: "feedlocation",
         type: "text",
         placeholder: "Feed Location",
         errorMessage:
