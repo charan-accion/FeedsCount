@@ -1,0 +1,88 @@
+[
+    {
+        "feedName": "Opoint",
+        "feedCount": 440,
+        "date": "16/08/2022",
+        "feedCode": "A",
+        "data": [
+            {
+                "name": "Sun",
+                "count": 140,
+                "date": "10/08/2022"
+            },
+            {
+                "name": "Mon",
+                "count": 190,
+                "date": "11/08/2022"
+            },
+            {
+                "name": "Tue",
+                "count": 240,
+                "date": "12/08/2022"
+            },
+            {
+                "name": "Wed",
+                "count": 300,
+                "date": "13/08/2022"
+            },
+            {
+                "name": "Thu",
+                "count": 450,
+                "date": "14/08/2022"
+            },
+            {
+                "name": "Fri",
+                "count": 900,
+                "date": "15/08/2022"
+            },
+            {
+                "name": "Sat",
+                "count": 1000,
+                "date": "16/08/2022"
+            }
+        ]
+    },
+    {
+        "feedName": "Alliance News Feed",
+        "feedCount": 480,
+        "date": "16/08/2022",
+        "category": "A",
+        "data": [
+            {
+                "name": "Sun",
+                "count": 1140,
+                "date": "10/08/2022"
+            },
+            {
+                "name": "Mon",
+                "count": 1190,
+                "date": "11/08/2022"
+            },
+            {
+                "name": "Tue",
+                "count": 2140,
+                "date": "12/08/2022"
+            },
+            {
+                "name": "Wed",
+                "count": 3100,
+                "date": "13/08/2022"
+            },
+            {
+                "name": "Thu",
+                "count": 4150,
+                "date": "14/08/2022"
+            },
+            {
+                "name": "Fri",
+                "count": 9100,
+                "date": "15/08/2022"
+            },
+            {
+                "name": "Sat",
+                "count": 11000,
+                "date": "16/08/2022"
+            }
+        ]
+    }
+]

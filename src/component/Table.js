@@ -1,4 +1,4 @@
-import { useState } from "react";
+//import { useState } from "react";
 import TableBody from "./TableBody";
 import TableHead from "./TableHead";
 
@@ -9,7 +9,7 @@ const Table = ({ caption, data, columns }) => {
     <>
       <table className="table">
         <caption>{caption}</caption>
-        <TableHead {...{ columns, columns }} />
+        <TableHead {...{ columns }} />
         <TableBody {...{ columns, data }} />
       </table>
     </>

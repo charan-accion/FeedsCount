@@ -2,11 +2,12 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 import React, { useState } from 'react';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import { render } from '@testing-library/react';
+//import { render } from '@testing-library/react';
 import Table from "./Table";
 //import axios from "axios";
-import mockData from "../mockData.json";
-import updateSampleData from "../updateSampleData.json";
+import mockData from "../Json/mockData.json";
+import updateSampleData from "../Json/updateSampleData.json";
+import oneWeekData from "../Json/oneWeekData.json"
 
 const columns = [
   { label: "FeedName", accessor: "feedName" },
@@ -18,9 +19,9 @@ function ChartData() {
 
   const [data, SetData] = useState(mockData);
   
-  console.log(data)
+  //console.log(data)
    function handleClick(e) {
-    SetData(updateSampleData);
+    SetData(oneWeekData);
   }
   return (
     <div className="row">
@@ -49,7 +50,7 @@ function ChartData() {
           6M
         </Button>
       </div>
-      {/*Table*/console.log("tabledata",data)}
+      {/*Table*/}
       
       <div className='table'>
         <Card>
@@ -67,7 +68,7 @@ function ChartData() {
 
         {data.map((lineData, key) => {
           //lineData[key].data.map((chartdata, key) => {
-            console.log("a",lineData,key)
+            //console.log("a",lineData,key)
             return(
               <div className="col-md-6" key={key}>
               <Card >

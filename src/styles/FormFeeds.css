@@ -10,6 +10,15 @@
     border-radius: 5px;
     border: 1px solid gray;
   }
+
+  .Auth{
+    display: inline-block;
+    margin-left: 10px;
+  }
+  .checkAuth{
+    display: -webkit-inline-box;
+    margin-left: -50px;
+  }
   
   
   label{
