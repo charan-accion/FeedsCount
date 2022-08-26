@@ -17,7 +17,7 @@ const columns = [
 
 function ChartData() {
 
-  const [data, SetData] = useState(mockData);
+  const [data, SetData] = useState(oneWeekData);
   
   //console.log(data)
    function handleClick(e) {
