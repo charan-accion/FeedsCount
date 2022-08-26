@@ -21,7 +21,7 @@ function ChartData() {
   
   //console.log(data)
    function handleClick(e) {
-    SetData(oneWeekData);
+    SetData(updateSampleData);
   }
   return (
     <div className="row">
@@ -103,7 +103,7 @@ function ChartData() {
           //}
           //)
           
-        })};
+        })}
 
       </div>
     </div>

@@ -1,65 +1,65 @@
 [
     {
         "feedName": "Opoint",
-        "feedCount": 440,
+        "feedCount": 9100,
         "date": "16/08/2022",
         "category": "A",
         "data": [
             {
+                "name": "2h",
+                "count": 1140
+            },
+            {
                 "name": "4h",
-                "count": 140
+                "count": 1190
+            },
+            {
+                "name": "6h",
+                "count": 2140
             },
             {
                 "name": "8h",
-                "count": 190
+                "count": 3100
+            },
+            {
+                "name": "10h",
+                "count": 4150
             },
             {
                 "name": "12h",
-                "count": 240
-            },
-            {
-                "name": "16h",
-                "count": 300
-            },
-            {
-                "name": "20h",
-                "count": 450
-            },
-            {
-                "name": "24h",
-                "count": 900
+                "count": 9100
             }
         ]
     },
     {
         "feedName": "Alliance News Feed",
-        "feedCount": 480,
+        "feedCount": 5000,
         "date": "16/08/2022",
         "category": "A",
         "data": [
             {
-                "name": "4h",
+                "name": "2h",
                 "count": 1400
             },
             {
+                "name": "4h",
+                "count": 2000
+            },
+            {
+                "name": "6h",
+                "count": 3400
+            },
+            {
                 "name": "8h",
-                "count": 1000
+                "count": 3800
+            },
+            {
+                "name": "10h",
+                "count": 4500
             },
             {
                 "name": "12h",
-                "count": 400
-            },
-            {
-                "name": "16h",
-                "count": 800
-            },
-            {
-                "name": "20h",
-                "count": 1500
-            },
-            {
-                "name": "24h",
-                "count": 1100
+                "count": 5000
             }
         ]
     }

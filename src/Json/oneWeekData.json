@@ -1,87 +1,108 @@
 [
     {
-        "feedName": "Opoint",
-        "feedCount": 440,
-        "date": "16/08/2022",
-        "feedCode": "A",
+        
         "data": [
             {
-                "name": "Sun",
-                "count": 140,
-                "date": "10/08/2022"
+                "feedName": "Opoint",
+                "feedCount": 240,
+                "date": "17/08/2022",
+                "feedCode": "B",
+                "name":"2h",
+                "count":1150
             },
             {
-                "name": "Mon",
-                "count": 190,
-                "date": "11/08/2022"
+                "feedName": "Opoint",
+                "feedCount": 240,
+                "date": "17/08/2022",
+                "feedCode": "B",
+                "name": "4h",
+                "count": 1000
             },
             {
-                "name": "Tue",
-                "count": 240,
-                "date": "12/08/2022"
+                "feedName": "Opoint",
+                "feedCount": 240,
+                "date": "17/08/2022",
+                "feedCode": "B",
+                "name": "6h",
+                "count": 4000
             },
             {
-                "name": "Wed",
-                "count": 300,
-                "date": "13/08/2022"
+                "feedName": "Opoint",
+                "feedCount": 240,
+                "date": "17/08/2022",
+                "feedCode": "B",
+                "name": "8h",
+                "count": 800
             },
             {
-                "name": "Thu",
-                "count": 450,
-                "date": "14/08/2022"
+                "feedName": "Opoint",
+                "feedCount": 240,
+                "date": "17/08/2022",
+                "feedCode": "B",
+                "name": "10h",
+                "count": 1500
             },
             {
-                "name": "Fri",
-                "count": 900,
-                "date": "15/08/2022"
-            },
-            {
-                "name": "Sat",
-                "count": 1000,
-                "date": "16/08/2022"
+                "feedName": "Opoint",
+                "feedCount": 240,
+                "date": "17/08/2022",
+                "feedCode": "B",
+                "name": "12h",
+                "count": 100
             }
         ]
     },
     {
-        "feedName": "Alliance News Feed",
-        "feedCount": 480,
-        "date": "16/08/2022",
-        "category": "A",
+        
         "data": [
             {
-                "name": "Sun",
-                "count": 1140,
-                "date": "10/08/2022"
+                "name": "2h",
+                "count": 40,
+                "feedName": "Alliance News Feed",
+                "feedCount": 240,
+                "date": "17/08/2022",
+                "feedCode": "B"
+                
             },
             {
-                "name": "Mon",
-                "count": 1190,
-                "date": "11/08/2022"
+                "name": "4h",
+                "count": 10,
+                "feedName": "Alliance News Feed",
+                "feedCount": 240,
+                "date": "17/08/2022",
+                "feedCode": "B"
             },
             {
-                "name": "Tue",
-                "count": 2140,
-                "date": "12/08/2022"
+                "name": "6h",
+                "count": 40,
+                "feedName": "Alliance News Feed",
+                "feedCount": 240,
+                "date": "17/08/2022",
+                "feedCode": "B"
             },
             {
-                "name": "Wed",
-                "count": 3100,
-                "date": "13/08/2022"
+                "name": "8h",
+                "count": 80,
+                "feedName": "Alliance News Feed",
+                "feedCount": 240,
+                "date": "17/08/2022",
+                "feedCode": "B"
             },
             {
-                "name": "Thu",
-                "count": 4150,
-                "date": "14/08/2022"
+                "name": "10h",
+                "count": 150,
+                "feedName": "Alliance News Feed",
+                "feedCount": 240,
+                "date": "17/08/2022",
+                "feedCode": "B"
             },
             {
-                "name": "Fri",
-                "count": 9100,
-                "date": "15/08/2022"
-            },
-            {
-                "name": "Sat",
-                "count": 11000,
-                "date": "16/08/2022"
+                "name": "12h",
+                "count": 10,
+                "feedName": "Alliance News Feed",
+                "feedCount": 240,
+                "date": "17/08/2022",
+                "feedCode": "B"
             }
         ]
     }
