@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button';
 import Table from "./Table";
 //import axios from "axios";
 import mockData from "../Json/mockData.json";
-import updateSampleData from "../Json/updateSampleData.json";
+import oneDayData from "../Json/oneDayData.json";
 import oneWeekData from "../Json/oneWeekData.json"
 
 const columns = [
@@ -15,13 +15,20 @@ const columns = [
   { label: "FeedDate", accessor: "date" }
 ];
 
+
 function ChartData() {
 
   const [data, SetData] = useState(oneWeekData);
-  
-  //console.log(data)
+  //let [tdata, TSetData] = useState([]);
+  let tabledata =[];
+      data.map((a,b) => {
+        a.data.map((x,y) => {
+        tabledata.push(x);
+      })
+      })
+      console.log("test",tabledata)
    function handleClick(e) {
-    SetData(updateSampleData);
+    SetData(oneDayData);
   }
   return (
     <div className="row">
@@ -56,7 +63,7 @@ function ChartData() {
         <Card>
           <Card.Body>
             <Table caption="Incoming monitoring feeds data"
-              data={data}
+              data={tabledata}
               columns={columns}>
 
             </Table>
@@ -67,8 +74,6 @@ function ChartData() {
       <div className="row first_chart" >
 
         {data.map((lineData, key) => {
-          //lineData[key].data.map((chartdata, key) => {
-            //console.log("a",lineData,key)
             return(
               <div className="col-md-6" key={key}>
               <Card >
@@ -88,10 +93,10 @@ function ChartData() {
                     >
   
                       <CartesianGrid horizontal="true" vertical="" stroke="#243240" />
-                      <XAxis dataKey="name" tick={{}} />
+                      <XAxis dataKey="key" tick={{}} />
                       <YAxis tick={{}} />
                       <Tooltip contentStyle={{}} itemStyle={{}} cursor={false} />
-                      <Line type="monotone" dataKey="count" stroke="#8884d8" strokeWidth="5" dot={{ fill: "#2e4355", stroke: "#8884d8", strokeWidth: 2, r: 5 }} activeDot={{ fill: "#2e4355", stroke: "#8884d8", strokeWidth: 5, r: 10 }} />
+                      <Line type="monotone" dataKey="feedCount" stroke="#8884d8" strokeWidth="5" dot={{ fill: "#2e4355", stroke: "#8884d8", strokeWidth: 2, r: 5 }} activeDot={{ fill: "#2e4355", stroke: "#8884d8", strokeWidth: 5, r: 10 }} />
   
                     </LineChart>
                   </ResponsiveContainer>

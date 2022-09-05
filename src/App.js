@@ -10,7 +10,7 @@ function App() {
     
     <>
       <Navbar />
-      <div className="container">
+      <div className="container1">
         <Routes>
           <Route path="/" element={<ChartData />} />
           <Route path="/CreateFeed" element={<CreateFeed />} />

@@ -3,27 +3,19 @@
 const TableBody = ({ data, columns }) => {
     return (
       <tbody>
-        {data.map((data1,key) => {
-          //console.log(tabledata,key);
-          data1.data.map((tabledata,key) => {
+        {data.map((tabledata,key) => {
           return (
             <tr key={key}>
               {columns.map(({ accessor }) => {
-                //console.log("abc",tabledata,key)
-                 // console.log("abc",data1,key)
                 const tData = tabledata[accessor] ? tabledata[accessor] : "——";
-                console.log(tData)
-                //<td>{tData}<td>
-                return <td key={accessor}>{tData}</td>;
-                
+                return <td>{tData}</td>;
                                 
               })}
             </tr>
           );
-        })
         })}
       </tbody>
     );
-  }
+  };
   
   export default TableBody;
