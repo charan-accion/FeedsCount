@@ -20,15 +20,14 @@ function ChartData() {
 
   const [data, SetData] = useState(oneWeekData);
   //let [tdata, TSetData] = useState([]);
-  let tabledata =[];
-      data.map((a,b) => {
-        a.data.map((x,y) => {
-        tabledata.push(x);
-      })
-      })
-      console.log("test",tabledata)
+ 
    function handleClick(e) {
+    if(e.target.id === "A")
+    SetData(mockData);
+    if(e.target.id === "B")
     SetData(oneDayData);
+    if(e.target.id === "C")
+    SetData(oneWeekData);
   }
   return (
     <div className="row">
@@ -63,7 +62,7 @@ function ChartData() {
         <Card>
           <Card.Body>
             <Table caption="Incoming monitoring feeds data"
-              data={tabledata}
+              data={data}
               columns={columns}>
 
             </Table>
