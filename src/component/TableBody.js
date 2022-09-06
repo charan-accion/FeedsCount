@@ -1,20 +1,21 @@
 
 
-const TableBody = ({ tableData, columns }) => {
-  let tabledata =[];
-  tableData.map((a,b) => {
+const TableBody = ({ data , columns }) => {
+  console.log(data,columns)
+  let tableData =[];
+  data.map((a,b) => {
     a.data.map((x,y) => {
-    tabledata.push(x);
+    tableData.push(x);
   })
   })
-  console.log("test",tabledata)
+  console.log("test",tableData)
     return (
       <tbody>
-        {tabledata.map((tabledata1,key) => {
+        {tableData.map((tabledata,key) => {
           return (
             <tr key={key}>
               {columns.map(({ accessor }) => {
-                const tData = tabledata1[accessor] ? tabledata1[accessor] : "——";
+                const tData = tabledata[accessor] ? tabledata[accessor] : "——";
                 return <td>{tData}</td>;
                                 
               })}

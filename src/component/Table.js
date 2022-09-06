@@ -3,14 +3,14 @@ import TableBody from "./TableBody";
 import TableHead from "./TableHead";
 
 const Table = ({ caption, data, columns }) => {
-  const [tableData, handleSorting] = useState(data, columns);
-console.log("data",tableData);
+  const [tableData] = useState(data, columns);
+console.log("data",data, tableData);
   return (
     <>
       <table className="table">
         <caption>{caption}</caption>
-        <TableHead {...{ columns, handleSorting }} />
-        <TableBody {...{ columns, tableData}} />
+        <TableHead {...{ columns, data }} />
+        <TableBody {...{ columns, data}} />
       </table>
     </>
   );

@@ -77,7 +77,7 @@ function ChartData() {
               <div className="col-md-6" key={key}>
               <Card >
                 <Card.Body>
-                  <div className="feedName">{lineData.feedName}</div>
+                  <div className="feedName">{lineData.data[0].feedName}</div>
                   <ResponsiveContainer width="100%" aspect={2}>
                     <LineChart
                       width={500}
