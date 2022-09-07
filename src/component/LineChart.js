@@ -98,6 +98,7 @@ function ChartData() {
                       <XAxis dataKey="key" tick={{}} />
                       <YAxis tick={{}} />
                       <Tooltip contentStyle={{}} itemStyle={{}} cursor={false} />
+                      
                       <Line type="monotone" dataKey="feedcount" stroke="#8884d8" strokeWidth="5" dot={{ fill: "#2e4355", stroke: "#8884d8", strokeWidth: 2, r: 5 }} activeDot={{ fill: "#2e4355", stroke: "#8884d8", strokeWidth: 5, r: 10 }} />
 
                     </LineChart>

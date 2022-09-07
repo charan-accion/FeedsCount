@@ -3,7 +3,7 @@ import Table from "./Table";
 import {AiOutlineUp, AiOutlineDown } from 'react-icons/ai';
 
 
-const TableHead = ({ columns, data }) => {
+const TableHead = ({ column, tableData, filterdata }) => {
   const sorting = (accessor, tabledata) => {
     console.log("test1",tabledata, accessor )
     if(accessor === "FeedName")
@@ -19,19 +19,20 @@ const TableHead = ({ columns, data }) => {
     //console.log("sort", accessor, data);
     let tabledata =[];
     tableData.map((a,b) => {
-      a.data.map((x,y) => {
+      a?.data?.length ? a.data.map((x,y) => {
       tabledata.push(x);
-    })
+    }) : tabledata.push(a);
     })
     sorting(accessor, tabledata);
     //Table("", tabledata,columns);
-    console.log("test2",tabledata )
+    filterdata.handleSorting(column, tabledata);
+    //console.log("test2",tabledata )
    };
 
   return (
     <thead>
       <tr>
-        {columns.map(({ label, key }) => {
+        {column.map(({ label, key }) => {
           
           return (
             //<th key={label} onClick={() => handleSortingChange(label, data)}>
@@ -41,7 +42,7 @@ const TableHead = ({ columns, data }) => {
             <th key={label}> 
             <div className='th-sorting'>{label} 
             <div className='th-sort-icon'>
-            <AiOutlineUp onClick={() => handleSortingChange(label, data)} className='srt-icon' />
+            <AiOutlineUp onClick={() => handleSortingChange(label, tableData)} className='srt-icon' />
             <AiOutlineDown onClick className='srt-icon' />
             </div></div></th>
           );
