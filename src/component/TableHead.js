@@ -4,7 +4,8 @@ import Table from "./Table";
 const TableHead = ({ columns, data }) => {
   const sorting = (tabledata) => {
     console.log("test1",tabledata )
-    return tabledata.sort((a, b) => a.feedName.toLowerCase() < b.feedName.toLowerCase() ? -1 : 1)
+    //return tabledata.sort((a, b) => a.feedName.toLowerCase() < b.feedName.toLowerCase() ? -1 : 1)
+    return tabledata.sort((a, b) => a.feedCount - b.feedCount)
     //console.log("test1",tabledata )
   }
   const handleSortingChange = (accessor, tableData) => {

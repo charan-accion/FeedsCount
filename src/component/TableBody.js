@@ -1,14 +1,14 @@
 
 
 const TableBody = ({ data , columns }) => {
-  console.log(data,columns)
+  //console.log(data,columns)
   let tableData =[];
   data.map((a,b) => {
     a.data.map((x,y) => {
     tableData.push(x);
   })
   })
-  console.log("test",tableData)
+  //console.log("test",tableData)
     return (
       <tbody>
         {tableData.map((tabledata,key) => {

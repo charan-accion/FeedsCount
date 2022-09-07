@@ -14,20 +14,23 @@ const columns = [
   { label: "FeedCount", accessor: "feedCount" },
   { label: "FeedDate", accessor: "date" }
 ];
-
+setTimeout(() => {
+  if (document.getElementById("A"))
+    document.getElementById("A").focus()
+}, 1000);
 
 function ChartData() {
 
   const [data, SetData] = useState(oneWeekData);
   //let [tdata, TSetData] = useState([]);
- 
-   function handleClick(e) {
-    if(e.target.id === "A")
-    SetData(mockData);
-    if(e.target.id === "B")
-    SetData(oneDayData);
-    if(e.target.id === "C")
-    SetData(oneWeekData);
+
+  function handleClick(e) {
+    if (e.target.id === "A")
+      SetData(mockData);
+    if (e.target.id === "B")
+      SetData(oneDayData);
+    if (e.target.id === "C")
+      SetData(oneWeekData);
   }
   return (
     <div className="row">
@@ -57,7 +60,7 @@ function ChartData() {
         </Button>
       </div>
       {/*Table*/}
-      
+
       <div className='table'>
         <Card>
           <Card.Body>
@@ -73,8 +76,8 @@ function ChartData() {
       <div className="row first_chart" >
 
         {data.map((lineData, key) => {
-            return(
-              <div className="col-md-6" key={key}>
+          return (
+            <div className="col-md-6" key={key}>
               <Card >
                 <Card.Body>
                   <div className="feedName">{lineData.data[0].feedName}</div>
@@ -90,23 +93,23 @@ function ChartData() {
                         bottom: 15,
                       }}
                     >
-  
+
                       <CartesianGrid horizontal="true" vertical="" stroke="#243240" />
                       <XAxis dataKey="key" tick={{}} />
                       <YAxis tick={{}} />
                       <Tooltip contentStyle={{}} itemStyle={{}} cursor={false} />
                       <Line type="monotone" dataKey="feedCount" stroke="#8884d8" strokeWidth="5" dot={{ fill: "#2e4355", stroke: "#8884d8", strokeWidth: 2, r: 5 }} activeDot={{ fill: "#2e4355", stroke: "#8884d8", strokeWidth: 5, r: 10 }} />
-  
+
                     </LineChart>
                   </ResponsiveContainer>
-  
+
                 </Card.Body>
               </Card>
             </div>
-            )
+          )
           //}
           //)
-          
+
         })}
 
       </div>

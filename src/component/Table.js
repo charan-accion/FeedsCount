@@ -4,7 +4,7 @@ import TableHead from "./TableHead";
 
 const Table = ({ caption, data, columns }) => {
   const [tableData] = useState(data, columns);
-console.log("data",data, tableData);
+//console.log("data",data, tableData);
   return (
     <>
       <table className="table">
