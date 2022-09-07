@@ -3,25 +3,22 @@ import TableBody from "./TableBody";
 import TableHead from "./TableHead";
 
 const Table = ({ caption, data, columns }) => {
-  const [tableData, settabledata] = useState(data);
-  const [column, setcolumn] = useState(columns)
-console.log("data1",data, tableData);
-useEffect(() => {
-  //console.log("test2",data1, columnRef )
-  settabledata(data);
-  setcolumn(columns);
-},[data] )
-const handleSorting = useCallback((columnRef, data1)  => {
-  console.log("test2",data1, columnRef )
-  settabledata(data1);
-  setcolumn(columnRef);
-})
+  const [tableData, SetTableData] = useState(data);
+  const [columnData, SetColumnData] = useState(columns);
+  useEffect(() => {
+    SetTableData(data);
+    SetColumnData(columns);
+  }, [data])
+  const handleSorting = useCallback((columnRef, data1) => {
+    SetTableData(data1);
+    SetColumnData(columnRef);
+  })
   return (
     <>
       <table className="table">
         <caption>{caption}</caption>
-        <TableHead {...{ column, tableData, filterdata : {handleSorting} }} />
-        <TableBody {...{ column, tableData}} />
+        <TableHead {...{ columnData, tableData, filterdata: { handleSorting } }} />
+        <TableBody {...{ columnData, tableData }} />
       </table>
     </>
   );

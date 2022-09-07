@@ -1,50 +1,44 @@
 import { useState } from "react";
 import Table from "./Table";
-import {AiOutlineUp, AiOutlineDown } from 'react-icons/ai';
+import { AiOutlineUp, AiOutlineDown } from 'react-icons/ai';
 
 
-const TableHead = ({ column, tableData, filterdata }) => {
+const TableHead = ({ columnData, tableData, filterdata }) => {
   const sorting = (accessor, tabledata) => {
-    console.log("test1",tabledata, accessor )
-    if(accessor === "FeedName")
-    return tabledata.sort((a, b) => a.feedname.toLowerCase() < b.feedname.toLowerCase() ? -1 : 1);
-    else if(accessor === "FeedDate")
-    return tabledata.sort((a, b) => a.date.toLowerCase() < b.date.toLowerCase() ? -1 : 1);
-    else if(accessor === "FeedCount")
-    return tabledata.sort((a, b) => a.feedcount - b.feedcount)
-    //console.log("test2",tabledata )
+    if (accessor === "FeedName")
+      return tabledata.sort((a, b) => a.feedname.toLowerCase() < b.feedname.toLowerCase() ? -1 : 1);
+    else if (accessor === "FeedDate")
+      return tabledata.sort((a, b) => a.date.toLowerCase() < b.date.toLowerCase() ? -1 : 1);
+    else if (accessor === "FeedCount")
+      return tabledata.sort((a, b) => a.feedcount - b.feedcount);
   }
   const handleSortingChange = (accessor, tableData) => {
-    
-    //console.log("sort", accessor, data);
-    let tabledata =[];
-    tableData.map((a,b) => {
-      a?.data?.length ? a.data.map((x,y) => {
-      tabledata.push(x);
-    }) : tabledata.push(a);
+    let tabledata = [];
+    tableData.map((a, b) => {
+      a?.data?.length ? a.data.map((x, y) => {
+        tabledata.push(x);
+      }) : tabledata.push(a);
     })
     sorting(accessor, tabledata);
-    //Table("", tabledata,columns);
-    filterdata.handleSorting(column, tabledata);
-    //console.log("test2",tabledata )
-   };
+    filterdata.handleSorting(columnData, tabledata);
+  };
 
   return (
     <thead>
       <tr>
-        {column.map(({ label, key }) => {
-          
+        {columnData.map(({ label, key }) => {
+
           return (
             //<th key={label} onClick={() => handleSortingChange(label, data)}>
-             // {label}
-           // </th>
-            
-            <th key={label}> 
-            <div className='th-sorting'>{label} 
-            <div className='th-sort-icon'>
-            <AiOutlineUp onClick={() => handleSortingChange(label, tableData)} className='srt-icon' />
-            <AiOutlineDown onClick className='srt-icon' />
-            </div></div></th>
+            // {label}
+            // </th>
+
+            <th key={label}>
+              <div className='th-sorting'>{label}
+                <div className='th-sort-icon'>
+                  <AiOutlineUp onClick={() => handleSortingChange(label, tableData)} className='srt-icon' />
+                  <AiOutlineDown onClick className='srt-icon' />
+                </div></div></th>
           );
         })}
       </tr>

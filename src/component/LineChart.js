@@ -17,11 +17,11 @@ const columns = [
 setTimeout(() => {
   if (document.getElementById("A"))
     document.getElementById("A").focus()
-}, 1000);
+}, 500);
 
 function ChartData() {
 
-  const [data, SetData] = useState(oneWeekData);
+  const [data, SetData] = useState(mockData);
   //let [tdata, TSetData] = useState([]);
 
   function handleClick(e) {
@@ -38,25 +38,25 @@ function ChartData() {
       <div className="col-md-6 Btn_filter">
 
         <Button variant="primary" onClick={handleClick} id='A'>
-          12H
+          12Hours
         </Button> &ensp;
         <Button variant="primary" onClick={handleClick} id='B'>
-          1D
+          24Hours
         </Button> &ensp;
         <Button variant="primary" onClick={handleClick} id='C'>
-          1W
+          1Week
         </Button> &ensp;
         <Button variant="primary" onClick={handleClick} id='D'>
-          15D
+          15Days
         </Button> &ensp;
         <Button variant="primary" onClick={handleClick} id='E'>
-          1M
+          1Month
         </Button> &ensp;
         <Button variant="primary" onClick={handleClick} id='F'>
-          3M
+          3Months
         </Button> &ensp;
         <Button variant="primary" onClick={handleClick} id='G'>
-          6M
+          6Months
         </Button>
       </div>
       {/*Table*/}
@@ -98,7 +98,7 @@ function ChartData() {
                       <XAxis dataKey="key" tick={{}} />
                       <YAxis tick={{}} />
                       <Tooltip contentStyle={{}} itemStyle={{}} cursor={false} />
-                      
+
                       <Line type="monotone" dataKey="feedcount" stroke="#8884d8" strokeWidth="5" dot={{ fill: "#2e4355", stroke: "#8884d8", strokeWidth: 2, r: 5 }} activeDot={{ fill: "#2e4355", stroke: "#8884d8", strokeWidth: 5, r: 10 }} />
 
                     </LineChart>
