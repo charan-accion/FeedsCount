@@ -3,39 +3,39 @@
         "data": [
             {
                 "key": "2h",
-                "feedCount": 114,
-                "feedName": "Opoint",
+                "feedcount": 114,
+                "feedname": "Opoint",
                 "category": "A",
                 "date": "16/08/2022"
             },
             {
                 "key": "4h",
-                "feedCount": 119,
-                "feedName": "Opoint",
+                "feedcount": 119,
+                "feedname": "Opoint",
                 "date": "16/08/2022"
             },
             {
                 "key": "6h",
-                "feedCount": 214,
-                "feedName": "Opoint",
+                "feedcount": 214,
+                "feedname": "Opoint",
                 "date": "16/08/2022"
             },
             {
                 "key": "8h",
-                "feedCount": 310,
-                "feedName": "Opoint",
+                "feedcount": 310,
+                "feedname": "Opoint",
                 "date": "16/08/2022"
             },
             {
                 "key": "10h",
-                "feedCount": 415,
-                "feedName": "Opoint",
+                "feedcount": 415,
+                "feedname": "Opoint",
                 "date": "16/08/2022"
             },
             {
                 "key": "12h",
-                "feedCount": 910,
-                "feedName": "Opoint",
+                "feedcount": 910,
+                "feedname": "Opoint",
                 "date": "16/08/2022"
             }
         ]
@@ -44,38 +44,38 @@
         "data": [
             {
                 "key": "2h",
-                "feedCount": 140,
-                "feedName": "Alliance News Feed",
+                "feedcount": 140,
+                "feedname": "Alliance News Feed",
                 "date": "16/08/2022"
             },
             {
                 "key": "4h",
-                "feedCount": 200,
-                "feedName": "Alliance News Feed",
+                "feedcount": 200,
+                "feedname": "Alliance News Feed",
                 "date": "16/08/2022"
             },
             {
                 "key": "6h",
-                "feedCount": 340,
-                "feedName": "Alliance News Feed",
+                "feedcount": 340,
+                "feedname": "Alliance News Feed",
                 "date": "16/08/2022"
             },
             {
                 "key": "8h",
-                "feedCount": 380,
-                "feedName": "Alliance News Feed",
+                "feedcount": 380,
+                "feedname": "Alliance News Feed",
                 "date": "16/08/2022"
             },
             {
                 "key": "10h",
-                "feedCount": 450,
-                "feedName": "Alliance News Feed",
+                "feedcount": 450,
+                "feedname": "Alliance News Feed",
                 "date": "16/08/2022"
             },
             {
                 "key": "12h",
-                "feedCount": 500,
-                "feedName": "Alliance News Feed",
+                "feedcount": 500,
+                "feedname": "Alliance News Feed",
                 "date": "16/08/2022"
             }
         ]

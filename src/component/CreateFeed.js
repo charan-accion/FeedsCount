@@ -14,7 +14,7 @@ const CreateFeed = () => {
   const inputs = [
     {
       id: 1,
-      name: "FeedName",
+      name: "feedname",
       type: "text",
       placeholder: "FeedName",
       errorMessage:
@@ -45,7 +45,7 @@ const CreateFeed = () => {
       },
       {
         id: 3,
-        name: "Username",
+        name: "username",
         type: "text",
         className:"userName",
         placeholder: "Username",

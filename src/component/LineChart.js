@@ -10,8 +10,8 @@ import oneDayData from "../Json/oneDayData.json";
 import oneWeekData from "../Json/oneWeekData.json"
 
 const columns = [
-  { label: "FeedName", accessor: "feedName" },
-  { label: "FeedCount", accessor: "feedCount" },
+  { label: "FeedName", accessor: "feedname" },
+  { label: "FeedCount", accessor: "feedcount" },
   { label: "FeedDate", accessor: "date" }
 ];
 setTimeout(() => {
@@ -80,7 +80,7 @@ function ChartData() {
             <div className="col-md-6" key={key}>
               <Card >
                 <Card.Body>
-                  <div className="feedName">{lineData.data[0].feedName}</div>
+                  <div className="feedname">{lineData.data[0].feedname}</div>
                   <ResponsiveContainer width="100%" aspect={2}>
                     <LineChart
                       width={500}
@@ -98,7 +98,7 @@ function ChartData() {
                       <XAxis dataKey="key" tick={{}} />
                       <YAxis tick={{}} />
                       <Tooltip contentStyle={{}} itemStyle={{}} cursor={false} />
-                      <Line type="monotone" dataKey="feedCount" stroke="#8884d8" strokeWidth="5" dot={{ fill: "#2e4355", stroke: "#8884d8", strokeWidth: 2, r: 5 }} activeDot={{ fill: "#2e4355", stroke: "#8884d8", strokeWidth: 5, r: 10 }} />
+                      <Line type="monotone" dataKey="feedcount" stroke="#8884d8" strokeWidth="5" dot={{ fill: "#2e4355", stroke: "#8884d8", strokeWidth: 2, r: 5 }} activeDot={{ fill: "#2e4355", stroke: "#8884d8", strokeWidth: 5, r: 10 }} />
 
                     </LineChart>
                   </ResponsiveContainer>

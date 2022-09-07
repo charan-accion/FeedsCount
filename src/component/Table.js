@@ -3,7 +3,7 @@ import TableBody from "./TableBody";
 import TableHead from "./TableHead";
 
 const Table = ({ caption, data, columns }) => {
-  const [tableData] = useState(data, columns);
+  //const [tableData, handleSortingChange] = useState(data, columns);
 //console.log("data",data, tableData);
   return (
     <>

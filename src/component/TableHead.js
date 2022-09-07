@@ -2,22 +2,26 @@ import { useState } from "react";
 import Table from "./Table";
 
 const TableHead = ({ columns, data }) => {
-  const sorting = (tabledata) => {
-    console.log("test1",tabledata )
-    //return tabledata.sort((a, b) => a.feedName.toLowerCase() < b.feedName.toLowerCase() ? -1 : 1)
-    return tabledata.sort((a, b) => a.feedCount - b.feedCount)
-    //console.log("test1",tabledata )
+  const sorting = (accessor, tabledata) => {
+    console.log("test1",tabledata, accessor )
+    if(accessor === "FeedName")
+    tabledata.sort((a, b) => a.feedname.toLowerCase() < b.feedname.toLowerCase() ? -1 : 1);
+    else if(accessor === "FeedDate")
+    tabledata.sort((a, b) => a.date.toLowerCase() < b.date.toLowerCase() ? -1 : 1);
+    else if(accessor === "FeedCount")
+    tabledata.sort((a, b) => a.feedcount - b.feedcount)
+    console.log("test2",tabledata )
   }
   const handleSortingChange = (accessor, tableData) => {
     
-    console.log("sort", accessor, data);
+    //console.log("sort", accessor, data);
     let tabledata =[];
-    data.map((a,b) => {
+    tableData.map((a,b) => {
       a.data.map((x,y) => {
       tabledata.push(x);
     })
     })
-    sorting(tabledata);
+    return sorting(accessor, tabledata);
     //Table("", tabledata,columns);
    };
 
