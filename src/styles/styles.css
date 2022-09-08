@@ -19,9 +19,18 @@
   }
   
   .site-title {
-    font-size: 2rem;
+    font-size: 1.4rem;
+    line-height: 1.4;
+  }
+
+  .site-title:hover{
+    color: #ffffff;
+    opacity: 0.8;
   }
   
+  .nav {
+    padding: 0 1rem!important;
+  }
   .nav ul {
     padding: 0;
     margin: 0;
@@ -36,13 +45,37 @@
     height: 100%;
     display: flex;
     align-items: center;
-    padding: .25rem;
+    padding: 0.5rem 1rem 0.7rem;
   }
   
-  .nav li.active {
-    background-color: #555;
-  }
   
-  .nav li:hover {
+  
+  .nav li.active a, .nav li:hover a{
     background-color: #777;
+    color: #ffffff;
   }
+
+ .first_chart  .feedname{
+     background: #dddddd;
+     padding: 10px 15px;
+     margin-bottom: 20px;
+  }
+  .first_chart  .card-body{
+    padding: 0!important;
+    background: #f5f5f5;
+  }
+
+  
+  .custom-table table{
+    margin-bottom: 0!important;
+  }
+  .custom-table .card-body{
+    padding: 0!important;
+  }
+  .custom-table tr th{
+    border-bottom: 1px solid #dddddd;
+  }
+  .custom-table tr th, .custom-table tr td, .custom-table caption{
+    padding: 12px 15px!important;
+  }
+  

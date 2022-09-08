@@ -61,7 +61,7 @@ function ChartData() {
       </div>
       {/*Table*/}
 
-      <div className='table'>
+      <div className='col-md-12 table custom-table'>
         <Card>
           <Card.Body>
             <Table caption="Incoming monitoring feeds data"
@@ -73,6 +73,7 @@ function ChartData() {
         </Card>
       </div>
       {/*Chart*/}
+      <div className='col-md-12'>
       <div className="row first_chart" >
 
         {data.map((lineData, key) => {
@@ -113,6 +114,7 @@ function ChartData() {
 
         })}
 
+      </div>
       </div>
     </div>
   );
