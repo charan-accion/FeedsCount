@@ -12,10 +12,11 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 //import { render } from '@testing-library/react';
 import Table from "./Table";
-import axios from "axios";
+//import axios from "axios";
 import mockData from "../Json/mockData.json";
 import oneDayData from "../Json/oneDayData.json";
 import oneWeekData from "../Json/oneWeekData.json";
+import oneMonthData from "../Json/oneMonthData.json";
 
 const columns = [
   { label: "FeedName", accessor: "feedname" },
@@ -31,7 +32,6 @@ const CustomTooltip = ({ active, payload, label }) => {
       </div>
     );
   }
-
   return null;
 };
 
@@ -40,7 +40,7 @@ setTimeout(() => {
 }, 500);
 
 function ChartData() {
-  const [data, SetData] = useState(mockData);
+  const [data, SetData] = useState(oneMonthData.feedResponse);
   //let [tdata, TSetData] = useState([]);
   // const res = axios.get('http://localhost:9555/uifeed/feed?duration=1M', { crossdomain: true },
   // { params: { answer: 42 } }
@@ -50,18 +50,22 @@ function ChartData() {
   //   }
   // }
   // );
-  useEffect(() => {
-    fetch("http://localhost:9555/uifeed/feed?duration=1M")
-        .then(res => res.json())
-        .then(
-            (data) => {console.log(data);
-            },
-                        )
-  }, [])
-  console.log("Response from API ",data.feedResponse);
+  // useEffect(() => {
+  //   fetch("http://localhost:9555/uifeed/feed?duration=1M")
+  //       .then(res => res.json())
+  //       .then(
+  //           (data) => {
+  //             //SetData(data.feedResponse)
+  //             SetData(oneMonthData.feedResponse);
+  //             console.log(data);
+  //             //console.log(data.feedResponse);
+  //           },
+  //         )
+  // }, [])
+  //console.log("Response from API ",data.feedResponse);
 
   function handleClick(e) {
-    if (e.target.id === "A") SetData(mockData);
+    if (e.target.id === "A") SetData(mockData);//feedcode,duration
     if (e.target.id === "B") SetData(oneDayData);
     if (e.target.id === "C") SetData(oneWeekData);
   }
@@ -118,12 +122,12 @@ function ChartData() {
               <div className="col-md-6" key={key}>
                 <Card>
                   <Card.Body>
-                    <div className="feedname">{lineData.data[0].feedname}</div>
+                    <div className="feedname">{lineData.feedData[0].feedname}</div>
                     <ResponsiveContainer width="100%" aspect={2}>
                       <LineChart
                         width={500}
                         height={300}
-                        data={lineData.data}
+                        data={lineData.feedData}
                         margin={{
                           top: 15,
                           right: 30,

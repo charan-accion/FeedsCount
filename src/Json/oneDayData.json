@@ -1,82 +1,79 @@
 [
     {
-        "category": "A",
         "data": [
             {
                 "feedname": "Opoint",
-                "date": "16/08/2022",
+                "date": "16/08/2022 04:00:00",
                 "key": "4h",
                 "feedcount": 140
             },
             {
                 "feedname": "Opoint",
-                "date": "16/08/2022",
+                "date": "16/08/2022 08:00:00",
                 "key": "8h",
                 "feedcount": 190
             },
             {
                 "feedname": "Opoint",
-                "date": "16/08/2022",
+                "date": "16/08/2022 12:00:00",
                 "key": "12h",
                 "feedcount": 240
             },
             {
                 "feedname": "Opoint",
-                "date": "16/08/2022",
+                "date": "16/08/2022 16:00:00",
                 "key": "16h",
                 "feedcount": 300
             },
             {
                 "feedname": "Opoint",
-                "date": "16/08/2022",
+                "date": "16/08/2022 20:00:00",
                 "key": "20h",
                 "feedcount": 450
             },
             {
                 "feedname": "Opoint",
-                "date": "16/08/2022",
+                "date": "16/08/2022 24:00:00",
                 "key": "24h",
                 "feedcount": 900
             }
         ]
     },
     {
-        "feedcount": 480,
-        "category": "A",
         "data": [
             {
                 "feedname": "Alliance News Feed",
-                "date": "16/08/2022",
+                "date": "16/08/2022 04:00:00",
                 "key": "4h",
                 "feedcount": 1400
             },
             {
                 "feedname": "Alliance News Feed",
-                "date": "16/08/2022",
+                "date": "16/08/2022 08:00:00",
                 "key": "8h",
                 "feedcount": 1000
             },
             {
                 "feedname": "Alliance News Feed",
-                "date": "16/08/2022",
+                "date": "16/08/2022 12:00:00",
                 "key": "12h",
                 "feedcount": 400
             },
             {
                 "feedname": "Alliance News Feed",
-                "date": "16/08/2022",
+                "date": "16/08/2022 16:00:00",
                 "key": "16h",
                 "feedcount": 800
             },
             {
                 "feedname": "Alliance News Feed",
-                "date": "16/08/2022",
+                "date": "16/08/2022 20:00:00",
                 "key": "20h",
                 "feedcount": 1500
             },
             {
                 "feedname": "Alliance News Feed",
-                "date": "16/08/2022",
+                "date": "16/08/2022 24:00:00",
                 "key": "24h",
                 "feedcount": 1100
             }

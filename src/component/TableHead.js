@@ -24,7 +24,7 @@ const TableHead = ({ columnData, tableData, filterdata }) => {
     console.log(sortValue)
     let tabledata = [];
     tableData.map((a, b) => {
-      a?.data?.length ? a.data.map((x, y) => {
+      a?.feedData?.length ? a.feedData.map((x, y) => {
         tabledata.push(x);
       }) : tabledata.push(a);
     })
