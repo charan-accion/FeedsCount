@@ -7,12 +7,12 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 //import { render } from '@testing-library/react';
 import Table from "./Table";
-//import axios from "axios";
+import axios from "axios";
 import mockData from "../Json/mockData.json";
 import oneDayData from "../Json/oneDayData.json";
 import oneWeekData from "../Json/oneWeekData.json";
@@ -42,6 +42,23 @@ setTimeout(() => {
 function ChartData() {
   const [data, SetData] = useState(mockData);
   //let [tdata, TSetData] = useState([]);
+  // const res = axios.get('http://localhost:9555/uifeed/feed?duration=1M', { crossdomain: true },
+  // { params: { answer: 42 } }
+  // {
+  //   headers : {
+  //   'Content-Type' : 'application/json'
+  //   }
+  // }
+  // );
+  useEffect(() => {
+    fetch("http://localhost:9555/uifeed/feed?duration=1M")
+        .then(res => res.json())
+        .then(
+            (data) => {console.log(data);
+            },
+                        )
+  }, [])
+  console.log("Response from API ",data.feedResponse);
 
   function handleClick(e) {
     if (e.target.id === "A") SetData(mockData);
