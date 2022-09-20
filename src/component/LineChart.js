@@ -44,25 +44,83 @@ function ChartData() {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     fetch("http://localhost:9555/uifeed/feed?duration=1M")
-        .then(res => res.json())
-        .then(
-            (response) => {
-              //SetData(data.feedResponse)
-              SetData(response.feedResponse);
-              console.log(response.feedResponse);
-            },
-          ).catch((err) => console.log(err));
+      .then(res => res.json())
+      .then(
+        (response) => {
+          SetData(response.feedResponse);
+        },
+      ).catch((err) => console.log(err));
   }, [])
   useEffect(() => {
     if (data.length !== 0) {
       setIsLoading(false);
     }
-    console.log(data);
   }, [data]);
   function handleClick(e) {
-    if (e.target.id === "A") SetData(mockData);//feedcode,duration
-    if (e.target.id === "B") SetData(oneDayData);
-    if (e.target.id === "C") SetData(oneWeekData);
+    if (e.target.id === "A") {
+      fetch("http://localhost:9555/uifeed/feed?duration=12H")
+        .then(res => res.json())
+        .then(
+          (response) => {
+            SetData(response.feedResponse);
+          },
+        ).catch((err) => console.log(err));
+    }
+
+    if (e.target.id === "B") {
+      fetch("http://localhost:9555/uifeed/feed?duration=1D")
+        .then(res => res.json())
+        .then(
+          (response) => {
+            SetData(response.feedResponse);
+          },
+        ).catch((err) => console.log(err));
+    }
+    if (e.target.id === "C") {
+      fetch("http://localhost:9555/uifeed/feed?duration=1W")
+        .then(res => res.json())
+        .then(
+          (response) => {
+            SetData(response.feedResponse);
+          },
+        ).catch((err) => console.log(err));
+    }
+    if (e.target.id === "D") {
+      fetch("http://localhost:9555/uifeed/feed?duration=2W")
+        .then(res => res.json())
+        .then(
+          (response) => {
+            SetData(response.feedResponse);
+          },
+        ).catch((err) => console.log(err));
+    }
+    if (e.target.id === "E") {
+      fetch("http://localhost:9555/uifeed/feed?duration=1M")
+        .then(res => res.json())
+        .then(
+          (response) => {
+            SetData(response.feedResponse);
+          },
+        ).catch((err) => console.log(err));
+    }
+    if (e.target.id === "F") {
+      fetch("http://localhost:9555/uifeed/feed?duration=3M")
+        .then(res => res.json())
+        .then(
+          (response) => {
+            SetData(response.feedResponse);
+          },
+        ).catch((err) => console.log(err));
+    }
+    if (e.target.id === "G") {
+      fetch("http://localhost:9555/uifeed/feed?duration=6M")
+        .then(res => res.json())
+        .then(
+          (response) => {
+            SetData(response.feedResponse);
+          },
+        ).catch((err) => console.log(err));
+    }
   }
   return (
     <div className="row">
@@ -113,63 +171,63 @@ function ChartData() {
 
       <div className="col-md-12">
         <div className="row first_chart">
-        {isLoading ? (
-        <h1>Loading...</h1>
-      ) : (
-          data.map((lineData, key) => {
-            return (
-              <div className="col-md-6" key={key}>
-                <Card>
-                  <Card.Body>
-                    <div className="feedname">{lineData.feedData[0].feedname}</div>
-                    <ResponsiveContainer width="100%" aspect={2}>
-                      <LineChart
-                        width={500}
-                        height={300}
-                        data={lineData.feedData}
-                        margin={{
-                          top: 15,
-                          right: 30,
-                          left: 20,
-                          bottom: 15,
-                        }}
-                      >
-                        <CartesianGrid
-                          horizontal="true"
-                          vertical=""
-                          stroke="#243240"
-                        />
-                        <XAxis dataKey="feedtime" tick={{}} />
-                        <YAxis tick={{}} />
-                        <Tooltip content={<CustomTooltip />} />
+          {isLoading ? (
+            <h1>Loading...</h1>
+          ) : (
+            data.map((lineData, key) => {
+              return (
+                <div className="col-md-6" key={key}>
+                  <Card>
+                    <Card.Body>
+                      <div className="feedname">{lineData.feedData[0].feedname}</div>
+                      <ResponsiveContainer width="100%" aspect={2}>
+                        <LineChart
+                          width={500}
+                          height={300}
+                          data={lineData.feedData}
+                          margin={{
+                            top: 15,
+                            right: 30,
+                            left: 20,
+                            bottom: 15,
+                          }}
+                        >
+                          <CartesianGrid
+                            horizontal="true"
+                            vertical=""
+                            stroke="#243240"
+                          />
+                          <XAxis dataKey="feedtime" tick={{}} />
+                          <YAxis tick={{}} />
+                          <Tooltip content={<CustomTooltip />} />
 
-                        <Line
-                          type="monotone"
-                          dataKey="feedcount"
-                          stroke="#8884d8"
-                          strokeWidth="5"
-                          dot={{
-                            fill: "#2e4355",
-                            stroke: "#8884d8",
-                            strokeWidth: 2,
-                            r: 5,
-                          }}
-                          activeDot={{
-                            fill: "#2e4355",
-                            stroke: "#8884d8",
-                            strokeWidth: 5,
-                            r: 10,
-                          }}
-                        />
-                      </LineChart>
-                    </ResponsiveContainer>
-                  </Card.Body>
-                </Card>
-              </div>
-            );
-            //}
-            //)
-          })
+                          <Line
+                            type="monotone"
+                            dataKey="feedcount"
+                            stroke="#8884d8"
+                            strokeWidth="5"
+                            dot={{
+                              fill: "#2e4355",
+                              stroke: "#8884d8",
+                              strokeWidth: 2,
+                              r: 5,
+                            }}
+                            activeDot={{
+                              fill: "#2e4355",
+                              stroke: "#8884d8",
+                              strokeWidth: 5,
+                              r: 10,
+                            }}
+                          />
+                        </LineChart>
+                      </ResponsiveContainer>
+                    </Card.Body>
+                  </Card>
+                </div>
+              );
+              //}
+              //)
+            })
           )}
         </div>
       </div>
