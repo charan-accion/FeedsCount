@@ -40,30 +40,25 @@ setTimeout(() => {
 }, 500);
 
 function ChartData() {
-  const [data, SetData] = useState(oneMonthData.feedResponse);
-  //let [tdata, TSetData] = useState([]);
-  // const res = axios.get('http://localhost:9555/uifeed/feed?duration=1M', { crossdomain: true },
-  // { params: { answer: 42 } }
-  // {
-  //   headers : {
-  //   'Content-Type' : 'application/json'
-  //   }
-  // }
-  // );
-  // useEffect(() => {
-  //   fetch("http://localhost:9555/uifeed/feed?duration=1M")
-  //       .then(res => res.json())
-  //       .then(
-  //           (data) => {
-  //             //SetData(data.feedResponse)
-  //             SetData(oneMonthData.feedResponse);
-  //             console.log(data);
-  //             //console.log(data.feedResponse);
-  //           },
-  //         )
-  // }, [])
-  //console.log("Response from API ",data.feedResponse);
-
+  const [data, SetData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    fetch("http://localhost:9555/uifeed/feed?duration=1M")
+        .then(res => res.json())
+        .then(
+            (response) => {
+              //SetData(data.feedResponse)
+              SetData(response.feedResponse);
+              console.log(response.feedResponse);
+            },
+          ).catch((err) => console.log(err));
+  }, [])
+  useEffect(() => {
+    if (data.length !== 0) {
+      setIsLoading(false);
+    }
+    console.log(data);
+  }, [data]);
   function handleClick(e) {
     if (e.target.id === "A") SetData(mockData);//feedcode,duration
     if (e.target.id === "B") SetData(oneDayData);
@@ -115,9 +110,13 @@ function ChartData() {
         </Card>
       </div>
       {/*Chart*/}
+
       <div className="col-md-12">
         <div className="row first_chart">
-          {data.map((lineData, key) => {
+        {isLoading ? (
+        <h1>Loading...</h1>
+      ) : (
+          data.map((lineData, key) => {
             return (
               <div className="col-md-6" key={key}>
                 <Card>
@@ -140,7 +139,7 @@ function ChartData() {
                           vertical=""
                           stroke="#243240"
                         />
-                        <XAxis dataKey="key" tick={{}} />
+                        <XAxis dataKey="feedtime" tick={{}} />
                         <YAxis tick={{}} />
                         <Tooltip content={<CustomTooltip />} />
 
@@ -170,7 +169,8 @@ function ChartData() {
             );
             //}
             //)
-          })}
+          })
+          )}
         </div>
       </div>
     </div>
