@@ -13,10 +13,10 @@ import Button from "react-bootstrap/Button";
 //import { render } from '@testing-library/react';
 import Table from "./Table";
 //import axios from "axios";
-import mockData from "../Json/mockData.json";
-import oneDayData from "../Json/oneDayData.json";
-import oneWeekData from "../Json/oneWeekData.json";
-import oneMonthData from "../Json/oneMonthData.json";
+//import mockData from "../Json/mockData.json";
+//import oneDayData from "../Json/oneDayData.json";
+//import oneWeekData from "../Json/oneWeekData.json";
+//import oneMonthData from "../Json/oneMonthData.json";
 
 const columns = [
   { label: "FeedName", accessor: "feedname" },
@@ -199,7 +199,7 @@ function ChartData() {
                           />
                           <XAxis dataKey="feedtime" tick={{}} />
                           <YAxis tick={{}} />
-                          <Tooltip content={<CustomTooltip />} />
+                          <Tooltip content={<CustomTooltip />} cursor={false} />
 
                           <Line
                             type="monotone"

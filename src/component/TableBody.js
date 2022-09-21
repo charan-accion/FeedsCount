@@ -14,7 +14,11 @@ const TableBody = ({ tableData, columnData }) => {
         return (
           <tr key={key}>
             {columnData.map(({ accessor }) => {
-              const tData = tabledata1[accessor] ? tabledata1[accessor] : "——";
+              let tData;
+              if (accessor === "feedcount")
+              tData = tabledata1[accessor] ? tabledata1[accessor] : 0;
+              else
+              tData = tabledata1[accessor] ? tabledata1[accessor] : "——";
               return <td>{tData}</td>;
 
             })}
